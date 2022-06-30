@@ -9,7 +9,7 @@ from tools.convert_PIL_base64 import base64_to_pil_image, pil_image_to_base64
 from tools.torch_utils import draw_bboxs, non_max_suppression_fast
 
 
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='myapp/model/853_Yolov5s/weights/best.pt', force_reload=True)
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='model/853_Yolov5s/weights/best.pt', force_reload=True)
 # nguong(threshold) confidence va IOU
 model.conf = 0.6 #yolov5/models/common.py/AutoShape(line 527)
 model.iou = 0.5

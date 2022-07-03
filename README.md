@@ -22,7 +22,7 @@ pip install -r requirements.txt
 python app.py
 ```
 ## Sơ đồ tổng quát
-![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
+![samples](https://github.com/liemkg1234/Websocket_FaceMaskDetection/blob/master/images/sodotongquat.PNG)
 
 ## Tập dữ liệu
 - [Moxa3K](https://shitty-bots-inc.github.io/MOXA/index.html): Gồm 3000 hình ảnh được chia tỷ lệ Train/Validation/Test là 2400/400/200
@@ -55,8 +55,8 @@ Các thông số chung:
 | EfficientDet-Lite3 | 11.2 | 82.1 | _ | _ | 53.7 |
 
 ## Demo
-![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
-![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
+![samples](https://github.com/liemkg1234/Websocket_FaceMaskDetection/blob/master/images/demo.PNG)
+![samples](https://github.com/liemkg1234/Websocket_FaceMaskDetection/blob/master/images/demo2.PNG)
 
 ### Liên hệ
 Email:  liemkg1234@gmail.com

@@ -54,3 +54,9 @@ Các thông số chung:
 | Yolov5x | 165.0 | 82.5 | 75.5 | 89.5 | 48.1 |
 | EfficientDet-Lite3 | 11.2 | 82.1 | _ | _ | 53.7 |
 
+## Demo
+![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
+![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
+
+### Liên hệ
+Email:  liemkg1234@gmail.com

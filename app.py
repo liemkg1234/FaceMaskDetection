@@ -17,7 +17,7 @@ model.iou = 0.5
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['DEBUG'] = True
-socketio = SocketIO(app, async_mode='eventlet')
+socketio = SocketIO(app) # , async_mode='gevent'
 # Nghe cac ket noi cua Client
 @socketio.on('connect', namespace='/detect')
 def connect():

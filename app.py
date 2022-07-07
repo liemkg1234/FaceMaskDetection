@@ -1,15 +1,17 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
+import eventlet
 
 import numpy as np
 from PIL import Image
 import torch
+import os
 
 from tools.convert_PIL_base64 import base64_to_pil_image, pil_image_to_base64
 from tools.torch_utils import draw_bboxs, non_max_suppression_fast
 
 
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='model/853_Yolov5s/weights/best.pt', force_reload=True)
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='model/853_Yolov5s/weights/best.pt', force_reload=True) #, force_reload=True
 # nguong(threshold) confidence va IOU
 model.conf = 0.6 #yolov5/models/common.py/AutoShape(line 527)
 model.iou = 0.5
@@ -17,7 +19,7 @@ model.iou = 0.5
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['DEBUG'] = True
-socketio = SocketIO(app) # , async_mode='gevent'
+socketio = SocketIO(app, async_mode='eventlet', cors_allowed_origins='*') # , async_mode='gevent', cors_allowed_origins=['http://localhost:5000', 'https://localhost:5000']
 # Nghe cac ket noi cua Client
 @socketio.on('connect', namespace='/detect')
 def connect():
@@ -38,7 +40,7 @@ def getImage(input): #type('str' base64URL)
     boxs = model(img_cv2)
     xxyy_pandas = boxs.pandas().xyxy[0]
     xxyy_pandas = non_max_suppression_fast(xxyy_pandas, 0.3)
-    # print(xxyy_pandas)
+    print(xxyy_pandas)
     #draw bounding box
     img_out = draw_bboxs(img_cv2, xxyy_pandas, (255, 0, 0), (0, 255, 0), 1)
     list_class = xxyy_pandas['name'].tolist()
@@ -61,4 +63,5 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, host='0.0.0.0', port=5000, debug=True, keyfile='key.pem', certfile='cert.pem') #https://192.168.1.20:5000 (Wifi LAN IPv4 address)
+    # socketio.run(app)

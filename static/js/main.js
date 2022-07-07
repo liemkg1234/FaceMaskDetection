@@ -1,7 +1,8 @@
 $(document).ready(function (){
     // Tao socket de connect toi server
     let namespace = '/detect'
-    var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
+    // var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
+    var socket = io.connect(window.location.protocol + '//' + document.domain + ':' + location.port + namespace);
 
     // Tao cac bien
     let video = document.querySelector('#videoElement');

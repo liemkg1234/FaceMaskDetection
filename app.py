@@ -40,7 +40,7 @@ def getImage(input): #type('str' base64URL)
     boxs = model(img_cv2)
     xxyy_pandas = boxs.pandas().xyxy[0]
     xxyy_pandas = non_max_suppression_fast(xxyy_pandas, 0.3)
-    print(xxyy_pandas)
+    # print(xxyy_pandas)
     #draw bounding box
     img_out = draw_bboxs(img_cv2, xxyy_pandas, (255, 0, 0), (0, 255, 0), 1)
     list_class = xxyy_pandas['name'].tolist()

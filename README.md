@@ -21,6 +21,9 @@ cd Websocket_FaceMaskDetection
 pip install -r requirements.txt
 python app.py
 ```
+# Demo
+https://www.youtube.com/watch?v=76KhB_ZdmHE
+
 ## Sơ đồ tổng quát
 ![samples](https://github.com/liemkg1234/Websocket_FaceMaskDetection/blob/master/images/sodotongquat.PNG)
 

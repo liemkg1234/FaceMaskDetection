@@ -56,6 +56,7 @@ Các thông số chung:
 | EfficientDet-Lite3 | 11.2 | 82.1 | _ | _ | 53.7 |
 
 ## Demo
+
 https://www.youtube.com/watch?v=76KhB_ZdmHE
 ![samples](https://github.com/liemkg1234/Websocket_FaceMaskDetection/blob/master/images/demo.PNG)
 ![samples](https://github.com/liemkg1234/Websocket_FaceMaskDetection/blob/master/images/demo2.PNG)

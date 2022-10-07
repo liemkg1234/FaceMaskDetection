@@ -19,6 +19,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['DEBUG'] = True
 socketio = SocketIO(app, async_mode='eventlet', cors_allowed_origins='*') # , async_mode='gevent', cors_allowed_origins=['http://localhost:5000', 'https://localhost:5000']
+
 # Nghe cac ket noi cua Client
 @socketio.on('connect', namespace='/detect')
 def connect():
@@ -62,5 +63,5 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True, keyfile='key.pem', certfile='cert.pem') #https://192.168.1.20:5000 (Wifi LAN IPv4 address) cmd ipconfig
-    # socketio.run(app)
+    socketio.run(app, host='0.0.0.0', port=5000, debug=True, keyfile='key.pem', certfile='cert.pem') #https://192.168.0.110:5000/ (Wifi LAN IPv4 address) cmd ipconfig
+    # socketio.run(app) port=os.environ['PORT']

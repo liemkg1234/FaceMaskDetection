@@ -1,6 +1,6 @@
 # Website phát hiện người đeo khẩu trang qua Camera
 Trong đề tài này, mình xây dựng các mô hình Object Detection tiên tiến như [Yolov5](https://github.com/ultralytics/yolov5), [Efficientdet-Lite3](https://arxiv.org/pdf/1911.09070.pdf) và so sánh với mô hình Yolov3-tiny được tác giả xây dựng trong [bài báo này](https://link.springer.com/content/pdf/10.1007/s41403-020-00157-z.pdf).
-Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) để xây dựng Website cho người dùng sử dụng chức năng phát hiện người đeo/không đeo khẩu trang qua Camera trong thời gian thực. Cuối cùng, mình đóng gói server bằng [docker](https://www.docker.com/) để dễ dàng triển khai ứng trên máy mới.
+Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) và [OpenSSL](https://www.openssl.org/) để xây dựng Website cho người dùng sử dụng chức năng phát hiện người đeo/không đeo khẩu trang qua Camera trong thời gian thực. Cuối cùng, mình đóng gói server bằng [docker](https://www.docker.com/) để dễ dàng triển khai ứng trên máy mới.
 
 **Các thư viện sử dụng**
 - [YOLOv5](https://github.com/ultralytics/yolov5)
@@ -14,6 +14,12 @@ Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.
 **Yêu cầu thêm (nếu chạy trên GPU)**
 - [NVIDIA Driver](https://www.nvidia.com/download/index.aspx)
 - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+
+**Run**
+```
+docker pull liemkg1234/fmdetection:mytag
+docker run  -d -p 5000:5000 liemkg1234/fmdetection:mytag (CPU)  ||  docker run --gpus all -d -p 5000:5000 --ulimit memlock=-1 --ulimit stack=67108864 liemkg1234/fmdetection:mytag (GPU)
+```
 
 # Pip
 **Môi trường**

@@ -18,7 +18,9 @@ Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.
 **Run**
 ```
 docker pull liemkg1234/fmdetection:mytag
-docker run  -d -p 5000:5000 liemkg1234/fmdetection:mytag (CPU)  ||  docker run --gpus all -d -p 5000:5000 --ulimit memlock=-1 --ulimit stack=67108864 liemkg1234/fmdetection:mytag (GPU)
+docker run  -d -p 5000:5000 liemkg1234/fmdetection:mytag (CPU)
+docker run --gpus all -d -p 5000:5000 --ulimit memlock=-1 --ulimit stack=67108864 liemkg1234/fmdetection:mytag (GPU)
+https://(Your IPv4 Address):5000
 ```
 
 # Pip

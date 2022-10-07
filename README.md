@@ -1,7 +1,14 @@
 # Website phát hiện người đeo khẩu trang qua Camera
 Trong đề tài này, mình xây dựng các mô hình Object Detection tiên tiến như [Yolov5](https://github.com/ultralytics/yolov5), [Efficientdet-Lite3](https://arxiv.org/pdf/1911.09070.pdf) và so sánh với mô hình Yolov3-tiny được tác giả xây dựng trong [bài báo này](https://link.springer.com/content/pdf/10.1007/s41403-020-00157-z.pdf).
-Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) để xây dựng Website cho người dùng sử dụng chức năng phát hiện người đeo/không đeo khẩu trang qua Camera trong thời gian thực.
+Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) để xây dựng Website cho người dùng sử dụng chức năng phát hiện người đeo/không đeo khẩu trang qua Camera trong thời gian thực. Cuối cùng, mình đóng gói server bằng [docker](https://www.docker.com/) để dễ dàng triển khai ứng trên máy mới.
 
+# Docker
+**Yêu cầu (chạy trên CPU)**
+- [Docker Engine](https://docs.docker.com/engine/install/): 20.10.17
+- [Ubuntu](https://ubuntu.com/download/desktop): 20.04 (Thêm WSL2 nếu cài trên Window)
+**Yêu cầu thêm (nếu chạy trên GPU**
+- [NVIDIA Driver](https://www.nvidia.com/download/index.aspx)
+- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 **Các thư viện sử dụng**
 - [YOLOv5](https://github.com/ultralytics/yolov5)
 - [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/)
@@ -12,7 +19,6 @@ Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.
 - Pycharm
 - Python 3.9.2
 - CUDA Version: 11.2
-
 
 **Run demo**
 ```

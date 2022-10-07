@@ -6,12 +6,6 @@ Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.
 - [YOLOv5](https://github.com/ultralytics/yolov5)
 - [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/)
 
-**Môi trường**
-- [Google Colaboratory](https://research.google.com/colaboratory/)
-- Pycharm
-- Python 3.9.2
-- CUDA Version: 11.2
-
 # Docker
 **Yêu cầu (chạy trên CPU)**
 - [Docker Engine](https://docs.docker.com/engine/install/): 20.10.17
@@ -22,6 +16,12 @@ Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.
 - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 
 # Pip
+**Môi trường**
+- [Google Colaboratory](https://research.google.com/colaboratory/)
+- Pycharm
+- Python 3.9.2
+- CUDA Version: 11.2
+
 **Run demo**
 ```
 git clone https://github.com/liemkg1234/Websocket_FaceMaskDetection

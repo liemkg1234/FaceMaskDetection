@@ -9,7 +9,7 @@ Sau đó, mình sử dụng [Flask-SocketIO](https://flask-socketio.readthedocs.
 # Docker
 **Yêu cầu (chạy trên CPU)**
 - [Docker Engine](https://docs.docker.com/engine/install/): 20.10.17
-- [Ubuntu](https://ubuntu.com/download/desktop): 20.04 (Thêm WSL2 nếu cài trên Window)
+- [Ubuntu](https://ubuntu.com/download/desktop): 20.04 (Thêm [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) nếu cài trên Window)
 
 **Yêu cầu thêm (nếu chạy trên GPU)**
 - [NVIDIA Driver](https://www.nvidia.com/download/index.aspx)

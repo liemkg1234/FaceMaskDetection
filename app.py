@@ -4,7 +4,6 @@ from flask_socketio import SocketIO, emit
 import numpy as np
 from PIL import Image
 import torch
-import os
 
 from tools.convert_PIL_base64 import base64_to_pil_image, pil_image_to_base64
 from tools.torch_utils import draw_bboxs, non_max_suppression_fast
